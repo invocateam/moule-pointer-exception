@@ -1,11 +1,13 @@
 import socket
 
+from config import SERVER_IP, SERVER_PORT, RESPONSE_SIZE
+
 
 class NetworkInterface:
     def __init__(self, host, port):
-        self.responseSize = 999999
+        self.responseSize = RESPONSE_SIZE
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.connect((host, port))
+        self.socket.connect((SERVER_IP, SERVER_PORT))
 
     def action(self, message):
         print("Send --> ", message)
