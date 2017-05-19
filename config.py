@@ -15,6 +15,7 @@ TURN_LIMIT = 1500
 SERVER_PORT = 1337
 SERVER_IP = 'localhost'
 RESPONSE_SIZE = 999999
+TEAM_NAME = "Invocateam"
 
 # tuiles
 DUNE = 'D'
