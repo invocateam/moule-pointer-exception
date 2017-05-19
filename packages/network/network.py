@@ -13,8 +13,6 @@ class NetworkInterface:
     def receive(self):
         r = self.socket.recv(RESPONSE_SIZE).decode()
         print("<-- Receive --", r)
-        if r.isdigit():
-            return int(r)
         return r
 
     def send(self, msg):
@@ -24,7 +22,8 @@ class NetworkInterface:
 
     def init_name(self):
         self.send(TEAM_NAME)
-        self.team_num = self.receive()
+        r = self.receive()
+        self.team_num = int(r)
         print("Team number", self.team_num)
 
     def action(self, message):
