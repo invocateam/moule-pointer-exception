@@ -1,8 +1,9 @@
 import socket
 
-class NetwaorkInterface():
+
+class NetworkInterface:
     def __init__(self, host, port):
-        self.responseSize= 999999
+        self.responseSize = 999999
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.socket.connect((host, port))
 
@@ -14,4 +15,3 @@ class NetwaorkInterface():
 
     def __del__(self):
         self.socket.close()
-
