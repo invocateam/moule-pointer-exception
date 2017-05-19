@@ -11,9 +11,11 @@ sys.path.append(path_of_here)
 
 # générales
 LIMIT_TIME = 1000
-NOMBRE_DE_TOURS_LIMITE = 1500
-PORT_SERVEUR = 1337
-IP_SERVEUR = 'localhost'
+TURN_LIMIT = 1500
+SERVER_PORT = 1337
+SERVER_IP = 'localhost'
+RESPONSE_SIZE = 999999
+TEAM_NAME = "Invocateam"
 
 # tuiles
 DUNE = 'D'
@@ -23,8 +25,8 @@ BIERE = 'B'
 INFRANCHISSABLE = 'X'
 
 # directions
-HAUT = 'N'
-BAS = 'S'
-DROITE = 'E'
-GAUCHE = 'O'
-PASSER_LE_TOUR = 'C'
+UP = 'N'
+DOWN = 'S'
+RIGHT = 'E'
+LEFT = 'O'
+IDLE = 'C'
