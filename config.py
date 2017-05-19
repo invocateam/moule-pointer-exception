@@ -30,3 +30,11 @@ DOWN = 'S'
 RIGHT = 'E'
 LEFT = 'O'
 IDLE = 'C'
+
+# exploration de la map
+MAX_WEIGHT = 100
+
+# constantes de pondération (choix avec score)
+MOY_VAL_MOULE = 55
+BONUS_BIERE = MOY_VAL_MOULE / 5
+BONUS_MOULE = MOY_VAL_MOULE / -5
