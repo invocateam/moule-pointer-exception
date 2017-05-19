@@ -15,4 +15,4 @@ from packages.network.network import NetworkInterface
 
 net = NetworkInterface()
 game = Game(net.receive())
-print(len(game.board.update_board(game.players[net.team_num])))
+game.board.update_board(game.players[net.team_num])
