@@ -12,11 +12,11 @@ class NetworkInterface:
 
     def receive(self):
         r = self.socket.recv(RESPONSE_SIZE).decode()
-        print("<-- Receive --", r)
+        # print("<-- Receive --", r)
         return r.rstrip()
 
     def send(self, msg):
-        print("Send --> ", msg)
+        # print("Send --> ", msg)
         encoded_msg = str(msg + "\n").encode()
         self.socket.send(encoded_msg)
 
@@ -24,7 +24,7 @@ class NetworkInterface:
         self.send(TEAM_NAME)
         r = self.receive()
         self.team_num = int(r)
-        print("Team number", self.team_num)
+        # print("Team number", self.team_num)
 
     def action(self, message):
         self.send(message)

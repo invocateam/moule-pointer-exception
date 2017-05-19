@@ -1,4 +1,4 @@
-from pprint import pprint
+# print import p# print
 
 from packages.game.board import Board
 from packages.game.player import Player
@@ -24,10 +24,10 @@ class Game:
             y, x = previous[1:]
 
     def next(self, player):
-        print(self.currentDir)
-        print(self.players[player].x, self.players[player].y)
+        # print(self.currentDir)
+        # print(self.players[player].x, self.players[player].y)
         destination = self.currentDir.pop()
-        print(destination)
+        # print(destination)
         if destination[1] > self.players[player].x and destination[0] == self.players[player].y:
             return RIGHT
         if destination[1] < self.players[player].x and destination[0] == self.players[player].y:
@@ -40,7 +40,6 @@ class Game:
 
     def update(self, inputstring):
         data = inputstring.split("/")
-        # pprint(inputstring)
         self.players = [Player(i, p.split(",")) for i, p in enumerate(data[2][2::].split("-"))]
-        print("updated", self.players[0].x, self.players[0].y)
+        # print("updated", self.players[0].x, self.players[0].y)
         self.board = Board(data[:2])

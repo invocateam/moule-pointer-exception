@@ -28,7 +28,7 @@ class Board:
         return self.explore(*coord, 0, [])
 
     def explore(self, x, y, weight, loot_list):
-        # print("\n".join(["".join(str(_)) for _ in self.board]))
+        # # print("\n".join(["".join(str(_)) for _ in self.board]))
         if weight >= MAX_WEIGHT:
             return
         tiles = [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)]

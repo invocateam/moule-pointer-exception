@@ -22,12 +22,12 @@ while next_input != 'FIN':
         game = Game(next_input)
     else:
         game.update(next_input)
-    if len(game.currentDir) == 0:
-        print("Searching")
-        loots = game.board.update_weight(game.players[net.team_num])
-        objective = ask_for_objective(game.board.board, loots)
-        game.set_direction(*objective)
+    # if len(game.currentDir) == 0:
+    # print("Searching")
+    loots = game.board.update_weight(game.players[net.team_num])
+    objective = ask_for_objective(game.board.board, loots)
+    game.set_direction(*objective)
     nextdirection = game.next(net.team_num)
-    print("Gonna move to : ", nextdirection)
+    # print("Gonna move to : ", nextdirection)
     net.action(nextdirection)
     next_input = net.receive()
