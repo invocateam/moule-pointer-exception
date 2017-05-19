@@ -13,7 +13,7 @@ class NetworkInterface:
     def receive(self):
         r = self.socket.recv(RESPONSE_SIZE).decode()
         print("<-- Receive --", r)
-        return r
+        return r.rstrip()
 
     def send(self, msg):
         print("Send --> ", msg)
@@ -28,8 +28,6 @@ class NetworkInterface:
 
     def action(self, message):
         self.send(message)
-        r = self.receive()
-        return r
 
     def __del__(self):
         self.socket.close()
