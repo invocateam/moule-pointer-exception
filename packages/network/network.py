@@ -13,7 +13,7 @@ class NetworkInterface:
     def receive(self):
         r = self.socket.recv(RESPONSE_SIZE).decode()
         print("<-- Receive --", r)
-        return r
+        return r.rstrip()
 
     def send(self, msg):
         print("Send --> ", msg)
