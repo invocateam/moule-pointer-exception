@@ -1,3 +1,5 @@
+from config import *
+
 def score_candidates(board, candidates_coo):
     """
     Calcule le score de chaque candidat.
@@ -22,8 +24,8 @@ def score_candidates(board, candidates_coo):
             value = MOY_VAL_MOULE  # MOULE
         elif type == BIERE:
             value = MOY_VAL_MOULE + BONUS_BIERE
-        elif type == BIERE:
-            value = MOY_VAL_MOULE + BONUS_BIERE
+        elif type == FRITE:
+            value = MOY_VAL_MOULE + BONUS_FRITE
 
         # calcul du score
         score = value / weight
