@@ -1,4 +1,7 @@
+from operator import itemgetter
+
 from config import *
+
 
 def score_candidates(board, candidates_coo):
     """
@@ -47,7 +50,7 @@ def choose_objective(in_candidates):
 
     # filtrage basique des candidats via le score
     max_score = max([c[0] for c in in_candidates])
-    candidates = in_candidates.filter(lambda e: e[0] == max_score)
+    candidates = [e for e in in_candidates if e[0] == max_score]
 
     # filtrage avancé si égalité(s)
     if len(candidates) == 1:
@@ -56,9 +59,9 @@ def choose_objective(in_candidates):
 
     else:
         # au plus proche
-        candidates.sort(lambda e: e[3])
+        candidates.sort(key=itemgetter(3))
         min_weight = min([c[3] for c in candidates])
-        candidates = candidates.filter(lambda e: e[3] == min_weight)
+        candidates = [e for e in candidates if e[3] == min_weight]
 
         if len(candidates) == 1:
             # on le tiens !
