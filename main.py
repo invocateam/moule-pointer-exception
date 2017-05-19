@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+# coding=utf-8
 
-if __name__ == '__main__':
-    print("Code !!!!!")
+# chargement de la configuration
+from config import *
+
+# ________________________________ imports des fonctions de plus haut niveau, qui seront appelées tour à tour
+
+
+
+
+# ________________________________ exécution
+
+
+
