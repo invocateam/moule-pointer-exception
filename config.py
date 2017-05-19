@@ -30,3 +30,6 @@ DOWN = 'S'
 RIGHT = 'E'
 LEFT = 'O'
 IDLE = 'C'
+
+# exploration de la map
+MAX_WEIGHT = 100

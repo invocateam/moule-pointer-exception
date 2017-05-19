@@ -10,6 +10,9 @@ from config import *
 
 
 # ________________________________ exécution
+from packages.game.game import Game
+from packages.network.network import NetworkInterface
 
-
-
+net = NetworkInterface()
+game = Game(net.receive())
+game.board.update_board(game.players[net.team_num])
