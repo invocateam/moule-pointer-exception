@@ -28,8 +28,6 @@ class NetworkInterface:
 
     def action(self, message):
         self.send(message)
-        r = self.receive()
-        return r
 
     def __del__(self):
         self.socket.close()
